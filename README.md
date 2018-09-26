@@ -1,4 +1,4 @@
-# Kakoune Edit or dir
+# Kakoune Edit or Dir
 
 Sometimes, when I use `edit` command in Kakoune, I press enter too
 early. Kakoune complains `foo is a directory`. I know Kakoune, thank you
