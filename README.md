@@ -41,4 +41,7 @@ When in `*dir*` buffer you can use `<ret>` to open selected file, and
 - 0.1 2018-09-26:
     - Kakoune v2018.09.04
     - initial release
+- 0.2 2018-09-27:
+    - FIX replace basename with substitution, PR #1
+
 
