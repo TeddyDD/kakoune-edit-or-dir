@@ -1,8 +1,8 @@
 define-command edit-or-dir -file-completion -params .. %{
     evaluate-commands %sh{
         echo "try %{ delete-buffer! *dir* }"
-        arg=$1
-        [ -z $arg ] && arg=$(pwd)
+        arg="$1"
+        [ -z "$arg" ] && arg=$(pwd)
         if [ -d "$arg" ]; then
             pwd=$(pwd)
             case "$1" in
@@ -16,7 +16,7 @@ define-command edit-or-dir -file-completion -params .. %{
             echo "edit_or_dir_display_dir %{$arg}"
             echo "try %{ execute-keys %{$prev}}"
         else
-            echo "edit %{$@}"
+            echo "edit %{$*}"
         fi
     }
 }
@@ -29,7 +29,7 @@ define-command -hidden -params 1 edit_or_dir_display_dir %{
 	evaluate-commands %sh{
 		keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space>--group-directories-first<space><ret>xd"
 		if [ -z $kak_opt_edit_or_dir_hidden ]; then
-			keys="!echo<space>../<space>&&<space>"$keys"gg"
+			keys="!echo<space>../<space>&&<space> $keys gg"
 		else
 			keys="!"$keys"ggxd"
 		fi

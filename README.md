@@ -51,4 +51,4 @@ When in `*dir*` buffer you can use following bindings:
     - ADD hidden files toggle, PR #2
     - ADD new bindings, PR #2
     - FIX remove new line from end of `*dir*` buffer
-
+	- FIX apply changes proposed by shellcheck
