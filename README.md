@@ -25,7 +25,7 @@ alias global e edit-or-dir
 ## Usage
 
 ```
-edit-or-dir PATH
+edit-or-dir [PATH]
 
 PATH - relative or absolute path to file or directory.
        . means current directory
@@ -34,7 +34,8 @@ PATH - relative or absolute path to file or directory.
 ```
 
 When in `*dir*` buffer you can use `<ret>` to open selected file, and
-`<backspace>` to go to parent directory.
+`<backspace>` to go to parent directory. `<a-h>` toogle hidden files, and
+`<esc>` closes file browser.
 
 ## Changelog
 
@@ -43,5 +44,8 @@ When in `*dir*` buffer you can use `<ret>` to open selected file, and
     - initial release
 - 0.2 2018-09-27:
     - FIX replace basename with substitution, PR #1
-
+- master 
+    - ADD hidden files toogle, PR #2
+    - ADD new bindings, PR #2
+    - FIX remove new line from end of `*dir*` buffer
 
