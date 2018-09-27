@@ -1,11 +1,13 @@
-define-command edit-or-dir -file-completion  -params 1.. %{
+define-command edit-or-dir -file-completion -params 1.. %{
     evaluate-commands %sh{
         echo "try %{ delete-buffer! *dir* }"
         if [ -d "$1" ]; then
+            pwd=$(pwd)
             case "$1" in
-                /*) dir="$1"        ;;
-                ..*) dir="$(pwd)/$1" prev="/$(basename $(pwd))<ret>;";;
-                *)  dir="$(pwd)/$1" ;;
+                /*)  dir="$1" ;;
+                ..*) dir="$pwd/$1"
+                     prev="/${pwd##*/}<ret>;" ;;
+                *)   dir="$pwd/$1" ;;
             esac
             echo "change-directory %{$dir}"
             echo "display-dir-buffer %{$1}"
@@ -27,4 +29,3 @@ hook global WinSetOption filetype=file_select %{
     map window normal <backspace> %{ :edit-or-dir<space>..<ret> }
     add-highlighter window/dir regex '^.+/$' 0:list
 }
-
