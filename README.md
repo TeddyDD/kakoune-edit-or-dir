@@ -34,7 +34,7 @@ PATH - relative or absolute path to file or directory.
 ```
 
 When in `*dir*` buffer you can use `<ret>` to open selected file, and
-`<backspace>` to go to parent directory. `<a-h>` toogle hidden files, and
+`<backspace>` to go to parent directory. `<a-h>` toggle hidden files, and
 `<esc>` closes file browser.
 
 ## Changelog
@@ -45,7 +45,7 @@ When in `*dir*` buffer you can use `<ret>` to open selected file, and
 - 0.2 2018-09-27:
     - FIX replace basename with substitution, PR #1
 - master 
-    - ADD hidden files toogle, PR #2
+    - ADD hidden files toggle, PR #2
     - ADD new bindings, PR #2
     - FIX remove new line from end of `*dir*` buffer
 
