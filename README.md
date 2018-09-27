@@ -33,9 +33,12 @@ PATH - relative or absolute path to file or directory.
        If PATH is directory, file browser in temporary buffer *dir* will be opened
 ```
 
-When in `*dir*` buffer you can use `<ret>` to open selected file, and
-`<backspace>` to go to parent directory. `<a-h>` toggle hidden files, and
-`<esc>` closes file browser.
+When in `*dir*` buffer you can use following bindings:
+
+- `<ret>`:       open selected file
+- `<backspace>`: go to parent directory
+- `<a-h>`:       toggle hidden files
+- `<esc>`:       close file browser
 
 ## Changelog
 
