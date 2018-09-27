@@ -1,16 +1,19 @@
-define-command edit-or-dir -file-completion -params 1.. %{
+define-command edit-or-dir -file-completion -params .. %{
     evaluate-commands %sh{
         echo "try %{ delete-buffer! *dir* }"
-        if [ -d "$1" ]; then
+        arg=$1
+        [ -z $arg ] && arg=$(pwd)
+        if [ -d "$arg" ]; then
             pwd=$(pwd)
             case "$1" in
-                /*)  dir="$1" ;;
-                ..*) dir="$pwd/$1"
+                '')  dir="$pwd" ;;
+                /*)  dir="$arg" ;;
+                ..*) dir="$pwd/$arg"
                      prev="/${pwd##*/}<ret>;" ;;
-                *)   dir="$pwd/$1" ;;
+                *)   dir="$pwd/$arg" ;;
             esac
             echo "change-directory %{$dir}"
-            echo "display-dir-buffer %{$1}"
+            echo "edit_or_dir_display_dir %{$arg}"
             echo "try %{ execute-keys %{$prev}}"
         else
             echo "edit %{$@}"
@@ -18,14 +21,37 @@ define-command edit-or-dir -file-completion -params 1.. %{
     }
 }
 
-define-command -hidden -params 1 display-dir-buffer %{
-    edit -scratch *dir*
-    set-option window filetype 'file_select'
-    execute-keys "!ls<space>-p<space>--group-directories-first<space><ret>ggO..<esc>"
+declare-option -hidden str edit_or_dir_hidden ''
+
+define-command -hidden -params 1 edit_or_dir_display_dir %{
+	edit -scratch *dir*
+	set-option window filetype 'file_select'
+	evaluate-commands %sh{
+		keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space>--group-directories-first<space><ret>"
+		if [ -z $kak_opt_edit_or_dir_hidden ]; then
+			keys="!echo<space>../<space>&&<space>"$keys"gg"
+		else
+			keys="!"$keys"ggxd"
+		fi
+		echo "execute-keys '$keys'"
+	}
 }
 
 hook global WinSetOption filetype=file_select %{
-    map window normal <ret> %{ x_y:edit-or-dir<space>'<c-r>"'<ret> }
-    map window normal <backspace> %{ :edit-or-dir<space>..<ret> }
+    map window normal <ret> %{ x_y:<space>edit-or-dir<space>'<c-r>"'<ret> }
+    map window normal <backspace> %{ :<space>edit-or-dir<space>..<ret> }
+    map window normal <esc> %{ :<space>db<ret> }
+    map window normal <a-h> %{ :<space>edit-or-dir-toggle-hidden<ret> }
     add-highlighter window/dir regex '^.+/$' 0:list
+}
+
+define-command -hidden edit-or-dir-toggle-hidden %{
+	evaluate-commands %sh{
+		if [ -z $kak_opt_edit_or_dir_hidden ]; then
+			echo "set-option global edit_or_dir_hidden '-a'"
+		else
+			echo "set-option global edit_or_dir_hidden ''"
+		fi
+		echo "edit-or-dir"
+	}
 }
