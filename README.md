@@ -47,9 +47,10 @@ When in `*dir*` buffer you can use following bindings:
   - initial release
 - 0.2 2018-09-27:
   - FIX replace basename with substitution, PR #1
-- master
+- 0.3 2018-09-28:
   - ADD hidden files toggle, PR #2
   - ADD new bindings, PR #2
+  - ADD editorconfig for developers
   - FIX remove new line from end of `*dir*` buffer
   - FIX apply changes proposed by shellcheck
 
