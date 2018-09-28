@@ -24,17 +24,17 @@ define-command edit-or-dir -file-completion -params .. %{
 declare-option -hidden str edit_or_dir_hidden ''
 
 define-command -hidden -params 1 edit_or_dir_display_dir %{
-	edit -scratch *dir*
-	set-option window filetype 'file_select'
-	evaluate-commands %sh{
-		keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space>--group-directories-first<space><ret>xd"
-		if [ -z $kak_opt_edit_or_dir_hidden ]; then
-			keys="!echo<space>../<space>&&<space> $keys gg"
-		else
-			keys="!"$keys"ggxd"
-		fi
-		echo "execute-keys '$keys'"
-	}
+    edit -scratch *dir*
+    set-option window filetype 'file_select'
+    evaluate-commands %sh{
+        keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space>--group-directories-first<space><ret>xd"
+        if [ -z $kak_opt_edit_or_dir_hidden ]; then
+            keys="!echo<space>../<space>&&<space> $keys gg"
+        else
+            keys="!"$keys"ggxd"
+        fi
+        echo "execute-keys '$keys'"
+    }
 }
 
 hook global WinSetOption filetype=file_select %{
@@ -46,12 +46,13 @@ hook global WinSetOption filetype=file_select %{
 }
 
 define-command -hidden edit-or-dir-toggle-hidden %{
-	evaluate-commands %sh{
-		if [ -z $kak_opt_edit_or_dir_hidden ]; then
-			echo "set-option global edit_or_dir_hidden '-a'"
-		else
-			echo "set-option global edit_or_dir_hidden ''"
-		fi
-		echo "edit-or-dir"
-	}
+    evaluate-commands %sh{
+        if [ -z $kak_opt_edit_or_dir_hidden ]; then
+            echo "set-option global edit_or_dir_hidden '-a'"
+        else
+            echo "set-option global edit_or_dir_hidden ''"
+        fi
+        echo "edit-or-dir"
+    }
 }
+

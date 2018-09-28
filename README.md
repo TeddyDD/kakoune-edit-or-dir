@@ -43,12 +43,13 @@ When in `*dir*` buffer you can use following bindings:
 ## Changelog
 
 - 0.1 2018-09-26:
-    - Kakoune v2018.09.04
-    - initial release
+  - Kakoune v2018.09.04
+  - initial release
 - 0.2 2018-09-27:
-    - FIX replace basename with substitution, PR #1
-- master 
-    - ADD hidden files toggle, PR #2
-    - ADD new bindings, PR #2
-    - FIX remove new line from end of `*dir*` buffer
-	- FIX apply changes proposed by shellcheck
+  - FIX replace basename with substitution, PR #1
+- master
+  - ADD hidden files toggle, PR #2
+  - ADD new bindings, PR #2
+  - FIX remove new line from end of `*dir*` buffer
+  - FIX apply changes proposed by shellcheck
+
