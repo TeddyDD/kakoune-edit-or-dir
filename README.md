@@ -35,10 +35,10 @@ PATH - relative or absolute path to file or directory.
 
 When in `*dir*` buffer you can use following bindings:
 
-- `<ret>`: Open selected file
-- `<backspace>`: Go to parent directory
-- `<a-h>`: Toggle hidden files
-- `<esc>`: Close file browser
+- <kbd>Return</kbd>: Open selected file
+- <kbd>Backspace</kbd>: Go to parent directory
+- <kbd>Alt</kbd> <kbd>h</kbd>: Toggle hidden files
+- <kbd>Escape</kbd>: Close file browser
 
 ## Changelog
 
