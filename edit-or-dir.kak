@@ -51,10 +51,10 @@ define-command -hidden edit-or-dir-back %{
 }
 
 hook global WinSetOption filetype=file_select %{
-    map window normal <ret> %{ :<space>edit-or-dir-forward<ret> }
-    map window normal <backspace> %{ :<space>edit-or-dir-back<ret> }
-    map window normal <esc> %{ :<space>db<ret> }
-    map window normal <a-h> %{ :<space>edit-or-dir-toggle-hidden<ret> }
+    map window normal <ret> ':<space>edit-or-dir-forward<ret>'
+    map window normal <backspace> ':<space>edit-or-dir-back<ret>'
+    map window normal <esc> ':<space>db<ret>'
+    map window normal <a-h> ':<space>edit-or-dir-toggle-hidden<ret>'
     add-highlighter window/dir regex '^.+/$' 0:list
 }
 
