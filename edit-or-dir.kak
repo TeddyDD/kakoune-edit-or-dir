@@ -13,7 +13,7 @@ define-command edit-or-dir -file-completion -params .. %{
                 *)   dir="$pwd/$arg" ;;
             esac
             echo "change-directory %{$dir}"
-            echo "edit_or_dir_display_dir %{$arg}"
+            echo "edit-or-dir-display-dir %{$arg}"
             echo "try %{ execute-keys %{$prev}}"
         else
             echo "edit %{$*}"
@@ -23,7 +23,7 @@ define-command edit-or-dir -file-completion -params .. %{
 
 declare-option -hidden str edit_or_dir_hidden ''
 
-define-command -hidden -params 1 edit_or_dir_display_dir %{
+define-command -hidden -params 1 edit-or-dir-display-dir %{
     edit -scratch *dir*
     set-option window filetype 'file_select'
     evaluate-commands %sh{
