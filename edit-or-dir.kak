@@ -37,9 +37,18 @@ define-command -hidden -params 1 edit-or-dir-display-dir %{
     }
 }
 
+define-command -hidden edit-or-dir-forward %{
+    execute-keys x_
+    edit-or-dir %reg{.}
+}
+
+define-command -hidden edit-or-dir-back %{
+    edit-or-dir ..
+}
+
 hook global WinSetOption filetype=file_select %{
-    map window normal <ret> %{ x_:<space>edit-or-dir<space>'<c-r>.'<ret> }
-    map window normal <backspace> %{ :<space>edit-or-dir<space>..<ret> }
+    map window normal <ret> %{ :<space>edit-or-dir-forward<ret> }
+    map window normal <backspace> %{ :<space>edit-or-dir-back<ret> }
     map window normal <esc> %{ :<space>db<ret> }
     map window normal <a-h> %{ :<space>edit-or-dir-toggle-hidden<ret> }
     add-highlighter window/dir regex '^.+/$' 0:list
