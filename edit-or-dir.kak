@@ -38,7 +38,7 @@ define-command -hidden -params 1 edit_or_dir_display_dir %{
 }
 
 hook global WinSetOption filetype=file_select %{
-    map window normal <ret> %{ x_y:<space>edit-or-dir<space>'<c-r>"'<ret> }
+    map window normal <ret> %{ x_:<space>edit-or-dir<space>'<c-r>.'<ret> }
     map window normal <backspace> %{ :<space>edit-or-dir<space>..<ret> }
     map window normal <esc> %{ :<space>db<ret> }
     map window normal <a-h> %{ :<space>edit-or-dir-toggle-hidden<ret> }
