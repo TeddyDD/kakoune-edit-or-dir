@@ -1,6 +1,6 @@
 # Kakoune Edit or Dir
 
-Sometimes, when I use `edit` command in Kakoune, I press enter too
+Sometimes, when I use `:edit` command in Kakoune, I press enter too
 early. Kakoune complains `foo is a directory`. I know Kakoune, thank you
 very much. What if editing directory would show you interactive file browser
 instead?
@@ -12,9 +12,9 @@ instead?
 ## Installation
 
 Source `edit-or-dir.kak` from your `kakrc` or let your plugin manager do
-the job. For convenience I recommend aliasing `edit-or-dir` command to `e`.
+the job. For convenience I recommend aliasing `:edit-or-dir` command to `:e`.
 I **do not** recommend aliasing or overriding built-in edit command, since
-it might broke other scripts. Replacing `e` alias is fine, scripts should
+it might broke other scripts. Replacing `:e` alias is fine, scripts should
 not relay on aliases anyway.
 
 ```
