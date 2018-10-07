@@ -13,7 +13,7 @@ instead?
 
 Source `edit-or-dir.kak` from your `kakrc` or let your plugin manager do
 the job. For convenience I recommend aliasing `:edit-or-dir` command to `:e`.
-I **do not** recommend aliasing or overriding built-in edit command, since
+I **do not** recommend aliasing or overriding built-in `:edit` command, since
 it might broke other scripts. Replacing `:e` alias is fine, scripts should
 not relay on aliases anyway.
 
@@ -46,13 +46,13 @@ When in `*dir*` buffer you can use following bindings:
   - Kakoune [v2018.09.04]
   - Initial release
 - 0.2 2018-09-27:
-  - FIX Replace basename with substitution, PR [#1]
+  - _FIX_ Replace `basename` with substitution, PR [#1]
 - 0.3 2018-09-28:
-  - ADD Hidden files toggle, PR [#2]
-  - ADD New bindings, PR [#2]
-  - ADD [EditorConfig] for developers
-  - FIX Remove new line from end of `*dir*` buffer
-  - FIX Apply changes proposed by [ShellCheck]
+  - _ADD_ Hidden files toggle, PR [#2]
+  - _ADD_ New bindings, PR [#2]
+  - _ADD_ [EditorConfig] for developers
+  - _FIX_ Remove new line from end of `*dir*` buffer
+  - _FIX_ Apply changes proposed by [ShellCheck]
 
 [EditorConfig]: https://editorconfig.org
 [ShellCheck]: https://shellcheck.net
