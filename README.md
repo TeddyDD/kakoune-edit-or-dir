@@ -5,9 +5,9 @@ early. Kakoune complains `foo is a directory`. I know Kakoune, thank you
 very much. What if editing directory would show you interactive file browser
 instead?
 
-## Gif time!
+## GIF time!
 
-![gif](edit-or-dir.gif)
+![GIF](edit-or-dir.gif)
 
 ## Installation
 
@@ -35,22 +35,22 @@ PATH - relative or absolute path to file or directory.
 
 When in `*dir*` buffer you can use following bindings:
 
-- `<ret>`:       open selected file
-- `<backspace>`: go to parent directory
-- `<a-h>`:       toggle hidden files
-- `<esc>`:       close file browser
+- `<ret>`:       Open selected file
+- `<backspace>`: Go to parent directory
+- `<a-h>`:       Toggle hidden files
+- `<esc>`:       Close file browser
 
 ## Changelog
 
 - 0.1 2018-09-26:
   - Kakoune v2018.09.04
-  - initial release
+  - Initial release
 - 0.2 2018-09-27:
-  - FIX replace basename with substitution, PR #1
+  - FIX Replace basename with substitution, PR #1
 - 0.3 2018-09-28:
-  - ADD hidden files toggle, PR #2
-  - ADD new bindings, PR #2
-  - ADD editorconfig for developers
-  - FIX remove new line from end of `*dir*` buffer
-  - FIX apply changes proposed by shellcheck
+  - ADD Hidden files toggle, PR #2
+  - ADD New bindings, PR #2
+  - ADD EditorConfig for developers
+  - FIX Remove new line from end of `*dir*` buffer
+  - FIX Apply changes proposed by ShellCheck
 
