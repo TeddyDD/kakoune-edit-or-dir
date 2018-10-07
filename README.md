@@ -43,14 +43,20 @@ When in `*dir*` buffer you can use following bindings:
 ## Changelog
 
 - 0.1 2018-09-26:
-  - Kakoune v2018.09.04
+  - Kakoune [v2018.09.04]
   - Initial release
 - 0.2 2018-09-27:
-  - FIX Replace basename with substitution, PR #1
+  - FIX Replace basename with substitution, PR [#1]
 - 0.3 2018-09-28:
-  - ADD Hidden files toggle, PR #2
-  - ADD New bindings, PR #2
-  - ADD EditorConfig for developers
+  - ADD Hidden files toggle, PR [#2]
+  - ADD New bindings, PR [#2]
+  - ADD [EditorConfig] for developers
   - FIX Remove new line from end of `*dir*` buffer
-  - FIX Apply changes proposed by ShellCheck
+  - FIX Apply changes proposed by [ShellCheck]
+
+[EditorConfig]: https://editorconfig.org
+[ShellCheck]: https://shellcheck.net
+[v2018.09.04]: https://github.com/mawww/kakoune/releases/tag/v2018.09.04
+[#1]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/1
+[#2]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/2
 
