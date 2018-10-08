@@ -38,6 +38,7 @@ define-command -hidden -params 1 edit-or-dir-display-dir %{
 }
 
 define-command -hidden edit-or-dir-forward %{
+    execute-keys '<a-s>'
     evaluate-commands -draft -itersel %{
         execute-keys ';x_'
         evaluate-commands -draft %{ try %{ edit %reg{.} } }
