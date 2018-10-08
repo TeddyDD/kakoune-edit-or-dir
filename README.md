@@ -43,6 +43,11 @@ When in `*dir*` buffer you can use following bindings:
 You can open multiple files by selecting them with <kbd>x</kbd> or other
 selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 
+## Related plugins
+
+- [alexherbo2][alexherbo2]/[edit-directory.kak][edit-directory.kak]
+- [occivink][occivink]/[kakoune-filetree][kakoune-filetree]
+
 ## Changelog
 
 - 0.1 2018-09-26:
@@ -71,4 +76,9 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 [#1]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/1
 [#2]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/2
 [#4]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/4
+
+[alexherbo2]: https://github.com/alexherbo2
+[edit-directory.kak]: https://github.com/alexherbo2/edit-directory.kak
+[occivink]: https://github.com/occivink
+[kakoune-filetree]: https://github.com/occivink/kakoune-filetree
 
