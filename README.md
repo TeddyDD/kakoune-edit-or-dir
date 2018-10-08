@@ -40,6 +40,9 @@ When in `*dir*` buffer you can use following bindings:
 - <kbd>Alt</kbd> <kbd>h</kbd>: Toggle hidden files
 - <kbd>Escape</kbd>: Close file browser
 
+You can open multiple files by selecting them with <kbd>x</kbd> or other
+selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
+
 ## Changelog
 
 - 0.1 2018-09-26:
@@ -53,10 +56,19 @@ When in `*dir*` buffer you can use following bindings:
   - _ADD_ [EditorConfig] for developers
   - _FIX_ Remove new line from end of `*dir*` buffer
   - _FIX_ Apply changes proposed by [ShellCheck]
+- master
+  - _ADD_ support to edit multiple files, PR [#4]
+  - _ADD_ CONTRIBUTING document, PR [#4]
+  - _ADD_ edit-or-dir-{forward,back} internal (hidden) commands, PR [#4]
+  - _FIX_ Fix Typos, improve style and formatting of README, PR [#4]
+  - _CHANGE_ rename edit-or-dir-display-dir (internal command, not breaking), PR [#4]
+  - _CHANGE_ refactoring, PR [#4]
+
 
 [EditorConfig]: https://editorconfig.org
 [ShellCheck]: https://shellcheck.net
 [v2018.09.04]: https://github.com/mawww/kakoune/releases/tag/v2018.09.04
 [#1]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/1
 [#2]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/2
+[#4]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/4
 
