@@ -45,6 +45,7 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 
 ## Related plugins
 
+- [TeddyDD][TeddyDD]/[kakoune-lf][kakoune-lf]
 - [alexherbo2][alexherbo2]/[edit-directory.kak][edit-directory.kak]
 - [occivink][occivink]/[kakoune-filetree][kakoune-filetree]
 
@@ -81,4 +82,6 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 [edit-directory.kak]: https://github.com/alexherbo2/edit-directory.kak
 [occivink]: https://github.com/occivink
 [kakoune-filetree]: https://github.com/occivink/kakoune-filetree
+[TeddyDD]: https://github.com/TeddyDD
+[kakoune-lf]: https://github.com/TeddyDD/kakoune-lf
 
