@@ -62,7 +62,7 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _ADD_ [EditorConfig] for developers
   - _FIX_ Remove new line from end of `*dir*` buffer
   - _FIX_ Apply changes proposed by [ShellCheck]
-- master
+- 0.4 2018-10-13:
   - _ADD_ support to edit multiple files, PR [#4]
   - _ADD_ CONTRIBUTING document, PR [#4]
   - _ADD_ edit-or-dir-{forward,back} internal (hidden) commands, PR [#4]
