@@ -11,11 +11,12 @@ instead?
 
 ## Installation
 
-Source `edit-or-dir.kak` from your `kakrc` or let your plugin manager do
-the job. For convenience I recommend aliasing `:edit-or-dir` command to `:e`.
-I **do not** recommend aliasing or overriding built-in `:edit` command, since
-it might broke other scripts. Replacing `:e` alias is fine, scripts should
-not relay on aliases anyway.
+Source `edit-or-dir.kak` from your `kakrc` or use [plug.kak].
+
+For convenience I recommend aliasing `:edit-or-dir` command to `:e`.
+I **do not** recommend aliasing or overriding built-in `:edit` command,
+since it might broke other scripts. Replacing `:e` alias is fine, scripts
+should not relay on aliases anyway.
 
 ```
 unalias global e edit
@@ -69,6 +70,8 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _FIX_ Fix Typos, improve style and formatting of README, PR [#4]
   - _CHANGE_ rename edit-or-dir-display-dir (internal command, not breaking), PR [#4]
   - _CHANGE_ refactoring, PR [#4]
+- master
+  - __CHANGE__ switch to directory layout with scripts in `rc` subdirectory (breaking: update source path in `kakrc`)
 
 
 [EditorConfig]: https://editorconfig.org
@@ -84,4 +87,5 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 [kakoune-filetree]: https://github.com/occivink/kakoune-filetree
 [TeddyDD]: https://github.com/TeddyDD
 [kakoune-lf]: https://github.com/TeddyDD/kakoune-lf
+[plug.kak]: https://github.com/andreyorst/plug.kak
 
