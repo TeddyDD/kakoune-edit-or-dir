@@ -72,9 +72,9 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _CHANGE_ refactoring, PR [#4]
 - master
   - Kakoune [v2018.10.27]
-  - __CHANGE__ switch to directory layout with scripts in `rc` subdirectory (breaking: update source path in `kakrc`)
   - _ADD_ issue template
-
+  - __CHANGE__ switch to directory layout with scripts in `rc` subdirectory (breaking: update source path in `kakrc`)
+  - _FIX_ remove `--group-directories-first` flag from ls call (MacOS compatibility)
 
 
 [EditorConfig]: https://editorconfig.org
