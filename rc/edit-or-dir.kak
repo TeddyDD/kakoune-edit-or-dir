@@ -27,7 +27,7 @@ define-command -hidden -params 1 edit-or-dir-display-dir %{
     edit -scratch *dir*
     set-option window filetype 'file_select'
     evaluate-commands %sh{
-        keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space>--group-directories-first<space><ret>xd"
+        keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space><ret>xd"
         if [ -z $kak_opt_edit_or_dir_hidden ]; then
             keys="!echo<space>../<space>&&<space> $keys gg"
         else
@@ -35,6 +35,10 @@ define-command -hidden -params 1 edit-or-dir-display-dir %{
         fi
         echo "execute-keys '$keys'"
     }
+    # group directories together
+    try %{ execute-keys %{ %<a-s><a-k>/$<ret>dgg<a-P>;gg } }
+    # clean up empty lines
+    try %{ execute-keys -draft %{ %<a-s><a-k>^$<ret>d } }
 }
 
 define-command -hidden edit-or-dir-forward %{
