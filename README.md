@@ -71,12 +71,16 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _CHANGE_ rename edit-or-dir-display-dir (internal command, not breaking), PR [#4]
   - _CHANGE_ refactoring, PR [#4]
 - master
+  - Kakoune [v2018.10.27]
   - __CHANGE__ switch to directory layout with scripts in `rc` subdirectory (breaking: update source path in `kakrc`)
+  - _ADD_ issue template
+
 
 
 [EditorConfig]: https://editorconfig.org
 [ShellCheck]: https://shellcheck.net
 [v2018.09.04]: https://github.com/mawww/kakoune/releases/tag/v2018.09.04
+[v2018.10.27]: https://github.com/mawww/kakoune/releases/tag/v2018.10.27
 [#1]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/1
 [#2]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/2
 [#4]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/4
