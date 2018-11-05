@@ -1,4 +1,6 @@
-# Kakoune Edit or Dir
+# Kakoune Edit or Dir ￼￼
+![GitHub tag](https://img.shields.io/github/tag-pre/TeddyDD/kakoune-edit-or-dir.svg)
+ ￼[![GitHub license](https://img.shields.io/github/license/TeddyDD/kakoune-edit-or-dir.svg)](https://github.com/TeddyDD/kakoune-edit-or-dir/blob/master/LICENSE.txt)
 
 Sometimes, when I use `:edit` command in Kakoune, I press enter too
 early. Kakoune complains `foo is a directory`. I know Kakoune, thank you
