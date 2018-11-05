@@ -70,7 +70,7 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _FIX_ Fix Typos, improve style and formatting of README, PR [#4]
   - _CHANGE_ rename edit-or-dir-display-dir (internal command, not breaking), PR [#4]
   - _CHANGE_ refactoring, PR [#4]
-- master
+- 0.5 2018-11-05:
   - Kakoune [v2018.10.27]
   - _ADD_ issue template
   - __CHANGE__ switch to directory layout with scripts in `rc` subdirectory (breaking: update source path in `kakrc`)
