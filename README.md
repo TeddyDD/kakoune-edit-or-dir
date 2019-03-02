@@ -49,7 +49,7 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 ## Related plugins
 
 - [TeddyDD][TeddyDD]/[kakoune-lf][kakoune-lf]
-- [alexherbo2][alexherbo2]/[edit-directory.kak][edit-directory.kak]
+- [alexherbo2][alexherbo2]/[explore.kak][edit-directory.kak]
 - [occivink][occivink]/[kakoune-filetree][kakoune-filetree]
 
 ## Changelog
