@@ -6,6 +6,7 @@ define-command edit-or-dir -file-completion -params .. %{
 
         # perform substitutions
         [ -z "$arg" ] && arg="$pwd"
+        [[ "$arg" == ~* ]] && arg="$HOME${arg:1}"
 
         if [ -d "$arg" ]; then
             case "$arg" in
