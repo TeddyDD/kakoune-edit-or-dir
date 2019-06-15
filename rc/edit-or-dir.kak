@@ -27,11 +27,11 @@ define-command -hidden -params 1 edit-or-dir-display-dir %{
     edit -scratch *dir*
     set-option window filetype 'file_select'
     evaluate-commands %sh{
-        keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space><ret>xd"
-        if [ -z $kak_opt_edit_or_dir_hidden ]; then
-            keys="!echo<space>../<space>&&<space> $keys gg"
+        keys="ls<space>$kak_opt_edit_or_dir_hidden<space>-p<space><ret>xdgg"
+        if [ "$(pwd)" = '/' ]; then
+            keys="!${keys}"
         else
-            keys="!"$keys"ggxd"
+            keys="!echo<space>../<space>&&<space> $keys"
         fi
         echo "execute-keys '$keys'"
     }
@@ -66,7 +66,7 @@ hook global WinSetOption filetype=file_select %{
 define-command -hidden edit-or-dir-toggle-hidden %{
     evaluate-commands %sh{
         if [ -z $kak_opt_edit_or_dir_hidden ]; then
-            echo "set-option global edit_or_dir_hidden '-a'"
+            echo "set-option global edit_or_dir_hidden '-A'"
         else
             echo "set-option global edit_or_dir_hidden ''"
         fi
