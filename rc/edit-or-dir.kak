@@ -4,17 +4,16 @@ define-command edit-or-dir -file-completion -params .. %{
         arg="$1"
         pwd=$(pwd)
 
-        # perform substitutions
-        [ -z "$arg" ] && arg="$pwd"
-        [[ "$arg" == ~* ]] && arg="$HOME${arg:1}"
+        case "$arg" in
+            '')  dir="$pwd" ;;
+            ~*)  dir="$HOME${arg#~*}" ;;
+            /*)  dir="$arg" ;;
+            ..*) dir="$pwd/$arg"
+                 prev="/${pwd##*/}<ret>;" ;;
+            *)   dir="$pwd/$arg" ;;
+        esac
 
-        if [ -d "$arg" ]; then
-            case "$arg" in
-                /*)  dir="$arg" ;;
-                ..*) dir="$pwd/$arg"
-                     prev="/${pwd##*/}<ret>;" ;;
-                *)   dir="$pwd/$arg" ;;
-            esac
+        if [ -d "$dir" ]; then
             echo "change-directory %{$dir}"
             echo "edit-or-dir-display-dir %{$arg}"
             echo "try %{ execute-keys %{$prev}}"
