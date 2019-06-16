@@ -2,16 +2,18 @@ define-command edit-or-dir -file-completion -params .. %{
     evaluate-commands %sh{
         echo "try %{ delete-buffer! *dir* }"
         arg="$1"
-        [ -z "$arg" ] && arg=$(pwd)
-        if [ -d "$arg" ]; then
-            pwd=$(pwd)
-            case "$1" in
-                '')  dir="$pwd" ;;
-                /*)  dir="$arg" ;;
-                ..*) dir="$pwd/$arg"
-                     prev="/${pwd##*/}<ret>;" ;;
-                *)   dir="$pwd/$arg" ;;
-            esac
+        pwd=$(pwd)
+
+        case "$arg" in
+            '')  dir="$pwd" ;;
+            ~*)  dir="$HOME${arg#~*}" ;;
+            /*)  dir="$arg" ;;
+            ..*) dir="$pwd/$arg"
+                 prev="/${pwd##*/}<ret>;" ;;
+            *)   dir="$pwd/$arg" ;;
+        esac
+
+        if [ -d "$dir" ]; then
             echo "change-directory %{$dir}"
             echo "edit-or-dir-display-dir %{$arg}"
             echo "try %{ execute-keys %{$prev}}"
