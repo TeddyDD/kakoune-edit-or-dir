@@ -77,6 +77,10 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _ADD_ issue template
   - __CHANGE__ switch to directory layout with scripts in `rc` subdirectory (breaking: update source path in `kakrc`)
   - _FIX_ remove `--group-directories-first` flag from ls call (MacOS compatibility)
+- 0.6 2019-06-16:
+  - _ADD_ expand `~` in `:edit-or-dir` [#11]
+  - _FIX_ don't show `..` in root PR: [#12]
+  - _CHANGE_ refactoring PR: [11] [12]
 
 
 [EditorConfig]: https://editorconfig.org
@@ -86,6 +90,8 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 [#1]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/1
 [#2]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/2
 [#4]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/4
+[#11]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/11
+[#12]: https://github.com/TeddyDD/kakoune-edit-or-dir/pull/12
 
 [alexherbo2]: https://github.com/alexherbo2
 [edit-directory.kak]: https://github.com/alexherbo2/edit-directory.kak
