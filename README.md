@@ -80,7 +80,7 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
 - 0.6 2019-06-16:
   - _ADD_ expand `~` in `:edit-or-dir` [#11]
   - _FIX_ don't show `..` in root PR: [#12]
-  - _CHANGE_ refactoring PR: [11] [12]
+  - _CHANGE_ refactoring PR: [#11] [#12]
 
 
 [EditorConfig]: https://editorconfig.org
