@@ -1,4 +1,11 @@
-# Kakoune Edit or Dir ￼￼
+# Kakoune Edit or Dir
+
+# **Deprecated in favour of [alexherbo2/explore.kak](https://github.com/alexherbo2/explore.kak)**
+
+@alexherbo2's implementation does the same thing but better :green_heart:
+
+---
+
 ![GitHub tag](https://img.shields.io/github/tag-pre/TeddyDD/kakoune-edit-or-dir.svg)
  ￼[![GitHub license](https://img.shields.io/github/license/TeddyDD/kakoune-edit-or-dir.svg)](https://github.com/TeddyDD/kakoune-edit-or-dir/blob/master/LICENSE.txt)
 
@@ -81,6 +88,7 @@ selection method like <kbd>%</kbd><kbd>s</kbd>regex<kbd>Return</kbd>
   - _ADD_ expand `~` in `:edit-or-dir` [#11]
   - _FIX_ don't show `..` in root PR: [#12]
   - _CHANGE_ refactoring PR: [#11] [#12]
+- **2020-01-02 DEPRECATED**
 
 
 [EditorConfig]: https://editorconfig.org
